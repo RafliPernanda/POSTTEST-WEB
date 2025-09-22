@@ -2,72 +2,115 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AyoBasket - Reservasi Lapangan Basket Online</title>
+  <!-- Bootstrap CSS via CDN (CSS only as requested) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div>
-      <h1>AyoBasket</h1>
-      <p>Pesan lapangan basket dengan cepat dan mudah!</p>
+<body class="bg-body">
+  <header class="border-bottom bg-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
+      <a href="#home" class="navbar-brand fw-bold text-primary fs-4 m-0">AyoBasket</a>
+      <nav>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lapangan">Lapangan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+      <p class="tagline text-muted w-100 mt-2 mb-0 small">Pesan lapangan basket dengan cepat dan mudah!</p>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#lapangan">Lapangan</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <section id="home">
-      <h2>Selamat datang di AyoBasket</h2>
-      <p>Pesan lapangan secara online, lihat jadwal, dan kelola reservasi dengan mudah.</p>
+    <section id="home" class="hero py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h2 class="display-6 fw-bold mb-3">Selamat datang di AyoBasket</h2>
+            <p class="lead mb-4">Pesan lapangan secara online, lihat jadwal, dan kelola reservasi dengan mudah.</p>
+            <a href="#lapangan" class="btn btn-primary btn-lg">Lihat Lapangan</a>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="hero-card card card-hero shadow-sm">
+              <div class="card-body">
+                <h3 class="h5 mb-2">Cepat, Mudah, Terjamin</h3>
+                <p class="mb-0 text-muted">Temukan lapangan favoritmu dan pesan dalam hitungan menit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="lapangan">
-      <h2>Daftar Lapangan</h2>
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <section id="lapangan">
+            <h2 class="section-title mb-4">Daftar Lapangan</h2>
 
-      <article>
-        <h3>Lapangan A - Indoor</h3>
-        <p>Lapangan berlantai kayu, kapasitas 10 pemain per tim. Cocok untuk pertandingan resmi dan latihan.</p>
-        <p><strong>Fasilitas:</strong> Papan skor, lampu, area bench</p>
-        <p><strong>Harga:</strong> Rp 150.000 / jam</p>
-        <p><a href="#">Pesan Lapangan A</a></p>
-      </article>
+            <div class="field-grid">
+              <article class="card card-featured h-100">
+                <div class="card-body d-flex flex-column">
+                  <h3 class="h5 card-title">Lapangan A - Indoor</h3>
+                  <p class="card-text">Lapangan berlantai kayu, kapasitas 10 pemain per tim. Cocok untuk pertandingan resmi dan latihan.</p>
+                  <p class="mb-1"><strong>Fasilitas:</strong> Papan skor, lampu, area bench</p>
+                  <p class="mb-3"><strong>Harga:</strong> Rp 150.000 / jam</p>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-primary w-100">Pesan Lapangan A</a>
+                  </div>
+                </div>
+              </article>
 
-      <article>
-        <h3>Lapangan B - Outdoor</h3>
-        <p>Lapangan outdoor dengan permukaan aspal khusus olahraga. Cocok untuk komunitas dan latihan santai.</p>
-        <p><strong>Fasilitas:</strong> Lampu malam, tempat parkir</p>
-        <p><strong>Harga:</strong> Rp 80.000 / jam</p>
-        <p><a href="#">Pesan Lapangan B</a></p>
-      </article>
-    </section>
+              <article class="card card-featured h-100">
+                <div class="card-body d-flex flex-column">
+                  <h3 class="h5 card-title">Lapangan B - Outdoor</h3>
+                  <p class="card-text">Lapangan outdoor dengan permukaan aspal khusus olahraga. Cocok untuk komunitas dan latihan santai.</p>
+                  <p class="mb-1"><strong>Fasilitas:</strong> Lampu malam, tempat parkir</p>
+                  <p class="mb-3"><strong>Harga:</strong> Rp 80.000 / jam</p>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-outline-primary w-100">Pesan Lapangan B</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
 
-    <aside>
-      <h2>FAQ Singkat</h2>
-      <dl>
-        <dt>Apa yang harus dibawa?</dt>
-        <dd>Bawa identitas dan konfirmasi reservasi bila diminta.</dd>
+        <aside class="col-lg-4">
+          <div class="card sticky-lg-top top-4">
+            <div class="card-body">
+              <h2 class="h5 section-title mb-3">FAQ Singkat</h2>
+              <dl class="mb-0">
+                <dt class="fw-semibold">Apa yang harus dibawa?</dt>
+                <dd class="text-muted mb-3">Bawa identitas dan konfirmasi reservasi bila diminta.</dd>
+                <dt class="fw-semibold">Bisakah refund?</dt>
+                <dd class="text-muted mb-0">Kebijakan refund akan bergantung pada waktu pembatalan; cantumkan detail pada halaman kebijakan.</dd>
+              </dl>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
 
-        <dt>Bisakah refund?</dt>
-        <dd>Kebijakan refund akan bergantung pada waktu pembatalan; cantumkan detail pada halaman kebijakan.</dd>
-      </dl>
-    </aside>
-
-    <section id="kontak">
-      <h2>Kontak</h2>
-      <address>
-        <p>Alamat: Jl. Loa Ipuh No. 1, Tenggarong</p>
-        <p>Telepon: 0812-3456-7890</p>
-      </address>
+    <section id="kontak" class="bg-light py-5 border-top">
+      <div class="container">
+        <h2 class="section-title mb-3">Kontak</h2>
+        <address class="mb-0 text-muted">
+          <p class="mb-1">Alamat: Jl. Loa Ipuh No. 1, Tenggarong</p>
+          <p class="mb-0">Telepon: 0812-3456-7890</p>
+        </address>
+      </div>
     </section>
   </main>
-  <footer>
-    <p>&copy; <span id="year">2025</span> AyoBasket</p>
-    <p>Referensi desain: <a href="https://www.gelora.id/" target="_blank" rel="noopener">https://www.gelora.id/</a></p>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0 small">&copy; <span id="year">2025</span> AyoBasket</p>
+      <p class="mb-0 small">Referensi desain: <a class="link-light text-decoration-underline" href="https://www.gelora.id/" target="_blank" rel="noopener">gelora.id</a></p>
+    </div>
   </footer>
 </body>
 </html>

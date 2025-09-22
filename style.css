@@ -1,0 +1,77 @@
+/*
+  AyoBasket custom styles (CSS3)
+  - Reusable, maintainable classes on top of Bootstrap via CDN
+  - Flexbox/Grid layouts and responsive design via media queries
+*/
+
+:root {
+  --ayb-primary: #0d6efd; /* Bootstrap primary for consistency */
+  --ayb-accent: #f97316;  /* Accent (orange) */
+  --ayb-surface: #ffffff;
+  --ayb-muted: #6c757d;
+  --ayb-border: #e9ecef;
+  --ayb-hero-bg: #f8fafc; /* subtle light background */
+}
+
+/*********************
+  Base and resets
+*********************/
+html { scroll-behavior: smooth; }
+body { color: #1f2937; }
+
+/*********************
+  Reusable components
+*********************/
+.section-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.top-4 { top: 1.5rem; }
+
+/*********************
+  Header / Hero
+*********************/
+.tagline { max-width: 720px; }
+
+.hero {
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(13, 110, 253, 0.08), transparent) var(--ayb-hero-bg);
+}
+.card-hero {
+  border: 1px solid var(--ayb-border);
+  background: var(--ayb-surface);
+}
+
+/*********************
+  Field cards grid (CSS Grid)
+*********************/
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card-featured {
+  border: 1px solid var(--ayb-border);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card-featured:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1.25rem rgba(13, 110, 253, 0.15);
+}
+
+/*********************
+  Footer
+*********************/
+footer a:hover { opacity: 0.85; }
+
+/*********************
+  Responsive (Media Queries)
+*********************/
+@media (min-width: 576px) {
+  .field-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) { /* lg */
+  .hero { padding-top: 4rem; padding-bottom: 4rem; }
+}
