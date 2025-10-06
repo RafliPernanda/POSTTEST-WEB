@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,7 +9,6 @@
   <title>AyoBasket - Reservasi Lapangan Basket Online</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- Custom styles -->
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -19,6 +21,12 @@
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#lapangan">Lapangan</a></li>
           <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          <?php if (isset($_SESSION['username'])): ?>
+            <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+          <?php else: ?>
+            <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+          <?php endif; ?>
         </ul>
       </nav>
       <p class="tagline text-muted w-100 mt-2 mb-0 small">Pesan lapangan basket dengan cepat dan mudah!</p>
@@ -113,10 +121,8 @@
       <p class="mb-0 small">Referensi desain: <a class="link-light text-decoration-underline" href="https://www.gelora.id/" target="_blank" rel="noopener">gelora.id</a></p>
     </div>
   </footer>
-  <!-- Bootstrap JS (Required for modal functionality) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<!-- Custom JavaScript -->
 <script src="script.js"></script>
 </body>
 </html>
